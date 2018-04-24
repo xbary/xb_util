@@ -17,9 +17,6 @@ extern "C" {
 
 int32_t globalonetry=0;
 
-volatile uint32_t DateTime;
-volatile uint32_t DateTimeStart;
-
 uint8_t monthlen(uint8_t isleapyear, uint8_t month)
 {
 	if (month == 1)
