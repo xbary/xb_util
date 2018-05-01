@@ -105,8 +105,6 @@ break; \
 #define OVRETURN {goto finally;}
 
 extern int32_t globalonetry;
-extern volatile uint32_t DateTime;
-extern volatile uint32_t DateTimeStart;
 	
 #define tz_CEST ((2*60*60))    ///< Central Europe Summer Time
 
