@@ -437,15 +437,21 @@ void uint16tohexstr(char *Aresult, uint16_t *Aint16tab, uint8_t Acount, bool Aad
 
 }
 //=================================================================================================================
-void uint8tohexstr(char *Aresult, uint8_t *Aint8tab, uint8_t Acount)
+void uint8tohexstr(char *Aresult, uint8_t *Aint8tab, uint8_t Acount, char Asep)
 {
 	register uint8_t Aint;
 	register int32_t i;
+	char sep = 0;
 	for (i = 0; i < Acount; i++)
 	{
+		if (sep != 0)
+		{
+			*(Aresult++) = Asep;
+		}
 		Aint = Aint8tab[i];
 		*(Aresult++) = tab[(Aint & 0xf0) >> 4];
 		*(Aresult++) = tab[(Aint & 0x0f)];
+		sep = Asep;
 	}
 }
 //=================================================================================================================

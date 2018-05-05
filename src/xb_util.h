@@ -201,7 +201,7 @@ extern uint8_t uinttoa(register uint32_t value, register char* result);
 extern bool hexstrTouint32(char *Astr, int8_t Alen, uint32_t *Aint);
 extern void uint32tohexstr(char *Aresult, uint32_t *Aint32tab, uint8_t Acount, bool Aadd);
 extern void uint16tohexstr(char *Aresult, uint16_t *Aint16tab, uint8_t Acount, bool Aadd);
-extern void uint8tohexstr(char *Aresult, uint8_t *Aint8tab, uint8_t Acount);	
+extern void uint8tohexstr(char *Aresult, uint8_t *Aint8tab, uint8_t Acount, char Asep=0);
 extern int IndexOfChars(char *Astr, int Afrom, const char *Aofchars, int Alench);
 extern uint32_t StringPos(const char *Astr,const char *Asubstr, uint32_t *Aposindx);
 extern bool StringTrim(char *Astr);
